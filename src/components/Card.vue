@@ -1,10 +1,13 @@
 <template>
     <div 
-        class="w-full p-5 bg-gray-700 rounded-2xl text-center mb-4 cursor-pointer shadow-xl hover:bg-gray-600 hover:scale-105 text-white"
-        :class="{ expanded: expanded }"
+        class="w-full p-5 bg-gray-700 mb-4 rounded-2xl cursor-pointer shadow-xl text-white"
+        :class="{ expanded : expanded }"
         @click="toggle"
     >
-        <h1 class="text-3xl underline mb-2">{{ cardTitle }}</h1>
+    <div class="w-full flex flex-row justify-between items-center  mb-2"> 
+        <h1 class="text-3xl">{{ cardTitle }}</h1>
+        <img src="chevron-down.svg" class="h-5">
+    </div>
         <p 
             class="text-justify"
             :class="{ hidden: !expanded}"
@@ -14,8 +17,6 @@
 
 <script>
 export default {
-    emits: ['closeOthers'],
-
     props: {
         cardTitle: String,
         description: String,
@@ -33,7 +34,6 @@ export default {
 
     methods: {
         toggle(){
-            this.$emit('closeOthers');
             this.expanded = !this.expanded;
         }
     },
