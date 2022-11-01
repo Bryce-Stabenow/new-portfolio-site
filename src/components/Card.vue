@@ -4,8 +4,8 @@
         :class="[expanded ? 'bg-gray-600 shadow-xl' : 'shadow-lg bg-gray-700']"
         @click="toggle"
     >
-    <div class="w-full flex flex-row justify-between items-center  mb-2"> 
-        <h1 class="text-3xl">{{ cardTitle }}</h1>
+    <div class="w-full flex flex-row justify-between items-center mb-2"> 
+        <h1 class="text-3xl font-bold" style="color: #00eeff;">{{ cardTitle }}</h1>
         <img 
             src="chevron-down.svg" 
             class="h-5 invert duration-100"
