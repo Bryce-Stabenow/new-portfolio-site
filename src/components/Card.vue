@@ -23,7 +23,17 @@
             pw
         </div>
 
-        <div v-if="this.cardType==='resume'" :class="{ hidden: !expanded}" class="mt-2"> 
+        <div v-if="this.cardType==='resume'" :class="{ hidden: !expanded}"> 
+            <ul class="mt-4">
+                Programming Languages and Tools:
+                <li>HTML, CSS, and JS</li>
+                <li>Vue and React</li>
+                <li>Node, particularly with Express</li>
+                <li>TailwindCSS</li>
+                <li>PHP Laravel</li>
+                <li>MongoDB, Firebase, and mySQL</li>
+            </ul>
+            <hr />
             <ul>
                 Work Experience:
                 <li>QA Manager & Software Developer
@@ -43,17 +53,7 @@
                 </li>
             </ul>
             <hr />
-            <ul>
-                Programming Languages and Tools:
-                <li>HTML, CSS, and JS</li>
-                <li>Vue and React</li>
-                <li>Node, particularly with Express</li>
-                <li>TailwindCSS</li>
-                <li>PHP Laravel</li>
-                <li>MongoDB, Firebase, and mySQL</li>
-            </ul>
-            <hr />
-            <ul>
+            <ul class="mb-4">
                 Education:
                 <li> Bachelors of Art - SIUe, 2018</li>
             </ul>
@@ -64,6 +64,7 @@
                 If you want to get in touch...
                 <li class="mt-4">Tweet me <a href="https://www.twitter.com/BryceStabenow" target="_blank" rel="noopener noreferrer">@BryceStabneow</a></li>
                 <li><a href="mailto: brycestabenow617@gmail.com">Email me</a></li>
+                <li>Follow me on <a href="https://github.com/Bryce-Stabenow">Github</a></li>
                 <li>Send a raven to <a href="https://www.youtube.com/watch?v=SkWbkcm0WA8" target="_blank" rel="noopener noreferrer">Winterfell</a></li>
             </ul>
         </div>
@@ -101,6 +102,10 @@ export default {
 <style scoped>
 ul{
     list-style: circle inside;
+    font-weight: bold;
+}
+li{
+    font-weight: normal;
 }
 li > ul {
     list-style: square inside;
