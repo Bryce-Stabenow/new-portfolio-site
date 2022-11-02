@@ -23,7 +23,7 @@
             pw
         </div>
 
-        <div v-if="this.cardType==='resume'" :class="{ hidden: !expanded}"> 
+        <div v-if="this.cardType==='resume'" :class="{ hidden: !expanded}" class="mt-2"> 
             <ul>
                 Work Experience:
                 <li>QA Manager & Software Developer
